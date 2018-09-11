@@ -1,0 +1,20 @@
+<view class="d-flex flex-column margin-b-60 margin-t-20">
+    <!-- 列表 -->
+    <view wx:for="{{list}}" wx:for-item="matchList" wx:key="id" class="d-flex flex-column bg-white margin-l-20 margin-r-20 margin-t-10 margin-b-10 padding-a-20 border-a-radius">
+      <view class="d-flex bor-b padding-b-10 align-items-center">
+        <view class="flex-auto font-size-32">{{matchList.time}}</view>
+        <view class="label">{{matchList.type}}</view>
+      </view>
+      <view class="d-flex align-items-end margin-t-10">
+        <view class="d-flex flex-column flex-auto font-l2-color">
+          <view>费用：{{matchList.price}}</view>
+          <view>地址：{{matchList.address}}</view>
+          <view>备注：{{matchList.info}}</view>
+        </view>
+        <view class="margin-l-20">
+          <button class="submit">报名</button>
+        </view>
+      </view>
+    </view>
+
+  </view>

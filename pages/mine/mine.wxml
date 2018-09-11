@@ -1,0 +1,35 @@
+<view class="d-flex flex-column">
+  <view class="d-flex align-items-center padding-a-40 bg-white">
+    <view class="mine-head">
+      <view style="background-image:url({{isLogin?userInfo.userHeader:noheadUrl}})" class="header"></view>
+    </view>
+    <view class="flex-auto">
+      <view hidden="{{isLogin?false:true}}" class="d-flex font-size-32 font-l4-color margin-b-30 name">
+        <view class="margin-r-10">{{userInfo.username}}</view>
+        <image class="sex" src="{{(userInfo.sex==1)?boyImg:girlImg}}"></image>
+      </view>
+      <view hidden="{{isLogin?false:true}}" class="d-flex font-size-20 font-l3-color info">
+        <view class="font-l2-color font-size-24">位置：{{userInfo.site}}</view>
+      </view>
+      <button id="authorizeUserInfo" hidden="{{isLogin?true:false}}" class="top-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    </view>
+  </view>
+  <view class="font-l2-color font-size-30 padding-l-20 margin-t-30">我的日程</view>
+  <view class="d-flex flex-column margin-b-60">
+    <!-- 列表 -->
+    <view wx:for="{{list}}" wx:for-item="matchList" wx:key="id" class="d-flex flex-column bg-white margin-l-20 margin-r-20 margin-t-10 margin-b-10 padding-a-20 border-a-radius">
+      <view class="d-flex bor-b padding-b-10 align-items-center">
+        <view class="flex-auto font-size-32">{{matchList.time}}</view>
+        <view class="label">{{matchList.type}}</view>
+      </view>
+      <view class="d-flex align-items-end margin-t-10">
+        <view class="d-flex flex-column flex-auto font-l2-color">
+          <view>费用：{{matchList.price}}</view>
+          <view>地址：{{matchList.address}}</view>
+          <view>备注：{{matchList.info}}</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

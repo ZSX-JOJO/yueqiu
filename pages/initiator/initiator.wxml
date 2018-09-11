@@ -1,0 +1,44 @@
+<view class="d-flex flex-column margin-t-20">
+  <!-- 地点 -->
+  <view bindtap="search" class="margin-b-10 d-flex align-items-center bg-white padding-l-30 padding-r-30 padding-t-20 padding-b-20 font-size-28 bor-b">
+    <view>选择场地</view>
+    <view class="flex-auto text-right">{{address}}</view>
+    <image class="next" src="../../public/images/next.png"></image>
+  </view>
+  <!-- 日期 -->
+  <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+    <view class="d-flex align-items-center bg-white padding-l-30 padding-r-30 padding-t-20 padding-b-20 font-size-28 bor-b">
+      <view class="">选择日期</view>
+      <view class="picker text-right flex-auto">{{date}}</view>
+      <image class="next" src="../../public/images/next.png"></image>
+    </view>
+  </picker>
+  <!-- 时间 -->
+  <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
+    <view class="d-flex align-items-center bg-white padding-l-30 padding-r-30 padding-t-20 padding-b-20 font-size-28 bor-b">
+      <view class="">选择开始时间</view>
+      <view class="picker text-right flex-auto">{{time}}</view>
+      <image class="next" src="../../public/images/next.png"></image>
+    </view>
+  </picker>
+  <!-- 几人制 -->
+  <picker mode="selector" range="{{typeArr}}" value="{{index}}" bindchange="bindNumChange">
+    <view class="d-flex align-items-center bg-white padding-l-30 padding-r-30 padding-t-20 padding-b-20 font-size-28 bor-b">
+      <view class="">选择人数</view>
+      <view class="picker text-right flex-auto">{{typeArr[index]}}</view>
+      <image class="next" src="../../public/images/next.png"></image>
+    </view>
+  </picker>
+  <!-- 价格 -->
+  <picker mode="selector" range="{{priceArr}}" value="{{index}}" bindchange="bindPriceChange">
+    <view class="d-flex align-items-center bg-white padding-l-30 padding-r-30 padding-t-20 padding-b-20 font-size-28 bor-b">
+      <view class="">价格说明</view>
+      <view class="picker text-right flex-auto">{{priceArr[index]}}</view>
+      <image class="next" src="../../public/images/next.png"></image>
+    </view>
+  </picker>
+  <view class="d-flex bg-white margin-t-10">
+    <textarea class="flex-auto padding-a-20 textarea" maxlength="50" placeholder="备注" />
+  </view>
+</view>
+<view class="submit">发布</view>

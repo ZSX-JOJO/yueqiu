@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+<view class="d-flex flex-column">
+  <image class="banner" mode="widthFix" src="../../public/images/banner2.jpg"></image>
+  <view class="d-flex">
+    <view bindtap="goInitiator" class="d-flex flex-auto bg-white align-items-center left-button">
+      <image class="button-icon" src="../../public/images/icon1.jpg"></image>
+      <view class="d-flex flex-auto flex-column">
+        <view class="font-title">发起比赛</view>
+        <view class="font-cont">发起一场快乐足球</view>
+      </view>
+    </view>
+    <view bindtap="active" class="d-flex flex-auto bg-white align-items-center right-button">
+      <image class="button-icon" src="../../public/images/icon3.jpg"></image>
+      <view class="d-flex flex-auto flex-column">
+        <view class="font-title">报名</view>
+        <view class="font-cont">想踢球，点这里</view>
+      </view>
+    </view>
+  </view>
+  <view class="font-l2-color font-size-30 padding-l-20">猜你喜欢</view>
+  <view class="d-flex flex-column margin-b-60">
+    <!-- 列表 -->
+    <view wx:for="{{list}}" wx:for-item="matchList" wx:key="id" class="d-flex flex-column bg-white margin-l-20 margin-r-20 margin-t-10 margin-b-10 padding-a-20 border-a-radius">
+      <view class="d-flex bor-b padding-b-10 align-items-center">
+        <view class="flex-auto font-size-32">{{matchList.time}}</view>
+        <view class="label">{{matchList.type}}</view>
+      </view>
+      <view class="d-flex align-items-end margin-t-10">
+        <view class="d-flex flex-column flex-auto font-l2-color">
+          <view>费用：{{matchList.price}}</view>
+          <view>地址：{{matchList.address}}</view>
+          <view>备注：{{matchList.info}}</view>
+        </view>
+        <view class="margin-l-20">
+          <button class="submit">报名</button>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,96 @@
+.mine-bg{
+  /* background-image: url("https://card-test.dushu.io/miniPro/img/mineBg.png"); */
+  background-repeat: no-repeat;
+  background-size: 100% 452rpx;
+}
+.mine-head{
+  border-radius: 50%;
+  box-shadow: 0 6rpx 10rpx 0 rgba(0,0,0,0.20);
+  margin-right: 30rpx;
+  text-align: center;
+  background-color:#ffffff;
+}
+.header{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  margin: 8rpx;
+  background-color: #fdd000;
+  background-position: center;
+  background-size: contain;
+}
+.height-40{
+  height: 40rpx;
+}
+.pay1{
+  width: 500rpx;
+  border: 2rpx solid #B2B2B2;
+  text-align: center;
+  font-size: 32rpx;
+  color: #030303;
+  border-radius: 50rpx;
+  padding: 14rpx;
+  margin: 0 40rpx;
+}
+.pay2{
+  width: 500rpx;
+  border: 2rpx solid #fdd000;
+  box-shadow: 0 4rpx 14rpx 0 rgba(253,208,0,0.57);
+  background-color: #fdd000;
+  text-align: center;
+  font-size: 32rpx;
+  color: #030303;
+  border-radius: 50rpx;
+  padding: 14rpx;
+  margin: 0 40rpx;
+}
+.top-login{
+  width: 160rpx;
+  border: 1rpx solid #999999;
+  text-align: center;
+  font-size: 32rpx;
+  color: #030303;
+  border-radius: 50rpx;
+  padding: 14rpx!important;
+}
+.sex{
+  margin-top: 6rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+.button-icon{
+  width: 64rpx;
+  height: 84rpx;
+  margin-right: 10rpx;
+}
+.left-button{
+  padding: 30rpx 5rpx 30rpx 30rpx;
+  margin: 30rpx 6rpx 30rpx 20rpx;
+  border-radius: 8rpx;
+}
+.right-button{
+  padding: 30rpx 5rpx 30rpx 30rpx;
+  margin: 30rpx 20rpx 30rpx 6rpx;
+  border-radius: 8rpx;
+}
+.font-title{
+  color: #787c87;
+  font-size: 32rpx;
+}
+.font-cont{
+  color: #cccccc;
+  font-size: 26rpx;
+}
+.bor-b{
+  border-bottom: 1px solid #dddddd
+}
+.bg-light{
+  background-color: #f9f9f9;
+}
+.label{
+  font-size: 20rpx;
+  color: #d81e06;
+  border: 1px solid #d81e06;
+  border-radius: 8rpx;
+  padding: 4rpx 10rpx;
+}
